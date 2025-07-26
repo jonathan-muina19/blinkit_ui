@@ -14,19 +14,21 @@ class SearchBarHome extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: Colors.white)
+          border: Border.all(color: Colors.white),
         ),
         child: Row(
           children: [
             Icon(Icons.search),
             const SizedBox(width: 10),
-            Text('Search “ice-cream”', style: TextStyle(
-              fontFamily: 'Poppins-Regular',
-              color: Color(0xFF9C9C9C),
+            Text(
+              'Search “ice-cream”',
+              style: TextStyle(
+                fontFamily: 'Poppins-Regular',
+                color: Color(0xFF9C9C9C),
               ),
             ),
             const SizedBox(width: 120),
-            ImageHelper.CustomImage(img: 'mic 1.png')
+            ImageHelper.CustomImage(img: 'mic 1.png'),
           ],
         ),
       ),
