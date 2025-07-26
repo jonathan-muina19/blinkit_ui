@@ -2,6 +2,8 @@ import 'package:blinkit_ui/constantes/images.dart';
 import 'package:blinkit_ui/widgets/login_zomato.dart';
 import 'package:flutter/material.dart';
 
+import '../bottomnavigationbaar/bottomnavigation_bar.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
@@ -47,7 +49,13 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 10),
-                      MyButtonLogin(),
+                      MyButtonLogin(
+                        onPressed: (){
+                          Navigator.pushReplacement(context, MaterialPageRoute(
+                              builder: (context) => const BottomnavigationBar())
+                          );
+                        }
+                      ),
                       const SizedBox(height: 5),
                       Text('Access your saved addresses from Zomato automatically!',style: TextStyle(
                         fontSize: 10,
