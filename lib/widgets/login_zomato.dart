@@ -9,7 +9,7 @@ class MyButtonLogin extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(18),
-      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+      margin: EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
         color: AppColors.buttonColor,
         borderRadius: BorderRadius.circular(10)

@@ -46,7 +46,23 @@ class LoginScreen extends StatelessWidget {
                         color: Color(0xFF9C9C9C)
                         ),
                       ),
-                      MyButtonLogin()
+                      const SizedBox(height: 10),
+                      MyButtonLogin(),
+                      const SizedBox(height: 5),
+                      Text('Access your saved addresses from Zomato automatically!',style: TextStyle(
+                        fontSize: 10,
+                        fontFamily:'Poppins-Regular',
+                        color: Color(0xFF9C9C9C)
+                        ),
+                      ),
+                      const SizedBox(height: 40),
+                      Text('or login with phone number', style: TextStyle(
+                        fontFamily: 'Poppins-Regular',
+                        fontSize: 15,
+                        color: Color(0xFF269237)
+                        ),
+                      )
+                      
                     ],
                   ),
                 ),
