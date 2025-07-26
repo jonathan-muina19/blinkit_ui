@@ -9,24 +9,26 @@ class MyButtonLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onPressed ,
+      onTap: onPressed,
       child: Container(
         padding: EdgeInsets.all(18),
         margin: EdgeInsets.symmetric(horizontal: 10),
         decoration: BoxDecoration(
           color: AppColors.buttonColor,
-          borderRadius: BorderRadius.circular(10)
+          borderRadius: BorderRadius.circular(10),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Login with  ', style: TextStyle(
-              fontSize: 14,
-              fontFamily: 'Poppins-Bold',
-              color: Colors.white
+            Text(
+              'Login with  ',
+              style: TextStyle(
+                fontSize: 14,
+                fontFamily: 'Poppins-Bold',
+                color: Colors.white,
               ),
             ),
-            Image.asset('assets/images/zomato.png', width: 73)
+            Image.asset('assets/images/zomato.png', width: 73),
           ],
         ),
       ),

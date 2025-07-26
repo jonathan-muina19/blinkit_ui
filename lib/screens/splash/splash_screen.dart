@@ -14,28 +14,24 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
   void initState() {
-   super.initState();
-   Timer(Duration(seconds: 3),(){
-     Navigator.pushReplacement(context, MaterialPageRoute(
-         builder: (context) => const LoginScreen()
-      )
-     );
-   });
+    super.initState();
+    Timer(Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const LoginScreen()),
+      );
+    });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.scaffoldBackground,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: ImageHelper.CustomImage(img: 'image 1.png'),
-          )
-        ],
+        children: [Center(child: ImageHelper.CustomImage(img: 'image 1.png'))],
       ),
     );
   }

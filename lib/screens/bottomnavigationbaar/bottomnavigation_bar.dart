@@ -13,51 +13,45 @@ class BottomnavigationBar extends StatefulWidget {
 }
 
 class _BottomnavigationBarState extends State<BottomnavigationBar> {
-
   int currentIndex = 0;
   List<Widget> pages = [
     HomeScreen(),
     CartScreen(),
     CategorieScreen(),
-    PrintScreen()
+    PrintScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: IndexedStack(
-        index: currentIndex,
-        children: pages,
-      ),
+      body: IndexedStack(index: currentIndex, children: pages),
       bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(
-              icon: ImageHelper.CustomImage(img: 'home 1.png'),
-              label: 'Home'
-            ),
-            BottomNavigationBarItem(
-                icon: ImageHelper.CustomImage(img: 'shopping-bag 1.png'),
-                label: 'Cart'
-            ),
-            BottomNavigationBarItem(
-                icon: ImageHelper.CustomImage(img: 'category 1.png'),
-                label: 'Categories'
-            ),
-            BottomNavigationBarItem(
-                icon: ImageHelper.CustomImage(img: 'printer 1.png'),
-                label: 'Print'
-            ),
-          ],
+        items: [
+          BottomNavigationBarItem(
+            icon: ImageHelper.CustomImage(img: 'home 1.png'),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: ImageHelper.CustomImage(img: 'shopping-bag 1.png'),
+            label: 'Cart',
+          ),
+          BottomNavigationBarItem(
+            icon: ImageHelper.CustomImage(img: 'category 1.png'),
+            label: 'Categories',
+          ),
+          BottomNavigationBarItem(
+            icon: ImageHelper.CustomImage(img: 'printer 1.png'),
+            label: 'Print',
+          ),
+        ],
         type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex,
-        onTap: (index){
-            setState(() {
-              currentIndex = index;
-            });
+        onTap: (index) {
+          setState(() {
+            currentIndex = index;
+          });
         },
-
-      )
-
+      ),
     );
   }
 }
