@@ -89,7 +89,7 @@ class HomeScreen extends StatelessWidget {
           Stack(
             children: [
               Container(
-                height: 220,
+                height: 180,
                 width: double.infinity,
                 color: AppColors.appBarHomeColor,
                 child: Column(children: [SizedBox(height: 30)]),
@@ -113,7 +113,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 120,
+                    height: 100,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
