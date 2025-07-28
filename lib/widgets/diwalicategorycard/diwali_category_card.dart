@@ -15,8 +15,7 @@ class DiwaliCategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 100,
-      margin: const EdgeInsets.only(right: 12),
-      padding: const EdgeInsets.all(8),
+      margin: const EdgeInsets.only(left: 5),
       decoration: BoxDecoration(
         color: Color(0xFFEAD3D3),
         borderRadius: BorderRadius.circular(12)

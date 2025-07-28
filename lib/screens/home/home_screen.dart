@@ -1,6 +1,7 @@
 import 'package:blinkit_ui/constantes/app_colors.dart';
 import 'package:blinkit_ui/constantes/images.dart';
 import 'package:blinkit_ui/widgets/diwalicategorycard/diwali_category_card.dart';
+import 'package:blinkit_ui/widgets/product/product_widget.dart';
 import 'package:blinkit_ui/widgets/search/search_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -12,16 +13,16 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 40),
+          SizedBox(height: 35),
           Stack(
             children: [
               Container(
-                height: 190,
+                height: 180,
                 width: double.infinity,
                 color: AppColors.appBarHomeColor,
                 child: Column(
                   children: [
-                    SizedBox(height: 30),
+                    SizedBox(height: 20),
                     Row(
                       children: [
                         const SizedBox(width: 20),
@@ -55,7 +56,7 @@ class HomeScreen extends StatelessWidget {
                           'HOME -',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 15,
+                            fontSize: 12,
                             fontFamily: 'Poppins-Bold',
                           ),
                         ),
@@ -75,11 +76,11 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               Positioned(
-                right: 20,
-                bottom: 100,
+                right: 10,
+                bottom: 120,
                 child: CircleAvatar(
                   backgroundColor: Colors.black,
-                  child: Icon(Icons.person, color: Colors.white, size: 20),
+                  child: Icon(Icons.person_sharp, color: Colors.white, size: 20),
                 ),
               ),
             ],
@@ -93,57 +94,78 @@ class HomeScreen extends StatelessWidget {
                 color: AppColors.appBarHomeColor,
                 child: Column(children: [SizedBox(height: 30)]),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                child: Column(
-                  children: [
-                    const SizedBox(height: 5),
-                    Row(
-                      children: [
-                        ImageHelper.CustomImage(img: 'image 60.png'),
-                        ImageHelper.CustomImage(img: 'image 55.png'),
-                        Text('Mega Diwali Sale', style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 20
-                          ),
+              Column(
+                children: [
+                  const SizedBox(height: 5),
+                  Row(
+                    children: [
+
+                      ImageHelper.CustomImage(img: 'image 60.png'),
+                      ImageHelper.CustomImage(img: 'image 55.png'),
+                      Text('Mega Diwali Sale', style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 20
                         ),
-                        ImageHelper.CustomImage(img: 'image 60.png'),
-                        ImageHelper.CustomImage(img: 'image 55.png'),
+                      ),
+                      ImageHelper.CustomImage(img: 'image 60.png'),
+                      ImageHelper.CustomImage(img: 'image 55.png'),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 120,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        DiwaliCategoryCard(
+                            title: 'Lights, Diyas & Candles',
+                            imagePath: 'assets/images/image 50.png'
+                        ),
+                        DiwaliCategoryCard(
+                            title: 'Diwali Gifts',
+                            imagePath: 'assets/images/image 51.png'
+                        ),
+                        DiwaliCategoryCard(
+                            title: 'Appliances & Gadgets',
+                            imagePath: 'assets/images/image 52.png'
+                        ),
+                        DiwaliCategoryCard(
+                            title: 'Home & Living',
+                            imagePath: 'assets/images/image 53.png'
+                        ),
+
                       ],
                     ),
-                    SizedBox(
-                      height: 120,
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: [
-                          DiwaliCategoryCard(
-                              title: 'Lights, Diyas & Candles',
-                              imagePath: 'assets/images/image 50.png'
-                          ),
-                          DiwaliCategoryCard(
-                              title: 'Diwali Gifts',
-                              imagePath: 'assets/images/image 51.png'
-                          ),
-                          DiwaliCategoryCard(
-                              title: 'Appliances & Gadgets',
-                              imagePath: 'assets/images/image 52.png'
-                          ),
-                          DiwaliCategoryCard(
-                              title: 'Home & Living',
-                              imagePath: 'assets/images/image 53.png'
-                          ),
-
-
-                        ],
-                      ),
-                    )
-
-                  ],
-                ),
+                  )
+                ],
               )
             ],
           ),
+          const SizedBox(height: 10),
+          SizedBox(
+            height: 200,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                ProductWidget(
+                  title: 'Golden Glass Wooden Lid Candle (Oudh)',
+                  imagePath: 'assets/images/image 54.png',
+                ),
+                ProductWidget(
+                  title: 'Royal Gulab JamunBy Bikano',
+                  imagePath: 'assets/images/image 57.png',
+                ),
+                ProductWidget(
+                  title: 'Bikaji Bhujia',
+                  imagePath: 'assets/images/image 63.png',
+                ),
+                ProductWidget(
+                  title: 'Bikaji Bhujia',
+                  imagePath: 'assets/images/image 63.png',
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
