@@ -36,7 +36,7 @@ class ProductWidget extends StatelessWidget {
                 ),
               ),
               Positioned(
-                bottom: 8,
+                bottom: 0,
                 right: 8,
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),

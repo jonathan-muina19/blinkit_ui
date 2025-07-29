@@ -9,7 +9,7 @@ class CategoryWidget extends StatefulWidget {
 
 class _CategoryWidgetState extends State<CategoryWidget> {
   var grocerykitchen = [
-    {"img": "assets/images/image 46.png", "text": "Vegetables & \nFruits"},
+    {"img": "assets/images/legume.png", "text": "Vegetables & \nFruits"},
     {"img": "assets/images/image 46 (1).png", "text": "Atta, Dal & \nRice"},
     {"img": "assets/images/image 46 (2).png", "text": "Oil, Ghee & \nMasala"},
     {"img": "assets/images/image 46 (3).png", "text": "Dairy, Bread & \nMilk"},
