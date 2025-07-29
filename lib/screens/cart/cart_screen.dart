@@ -17,7 +17,7 @@ class CartScreen extends StatelessWidget {
             child: Stack(
               children: [
                 Container(
-                  height: 170,
+                  height: 160,
                   width: double.infinity,
                   color: AppColors.scaffoldBackground,
                   child: Column(
@@ -69,7 +69,9 @@ class CartScreen extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(width: 5),
-                          Image.asset('assets/images/arrow-down-sign-to-navigate 1.png')
+                          Image.asset(
+                            'assets/images/arrow-down-sign-to-navigate 1.png',
+                          ),
                         ],
                       ),
                       const SizedBox(height: 14),
@@ -82,34 +84,35 @@ class CartScreen extends StatelessWidget {
                   bottom: 100,
                   child: CircleAvatar(
                     backgroundColor: Colors.white,
-                    child: Icon(Icons.person_sharp, color: Colors.black, size: 20),
+                    child: Icon(
+                      Icons.person_sharp,
+                      color: Colors.black,
+                      size: 20,
+                    ),
                   ),
                 ),
               ],
             ),
           ),
-          const SizedBox(height: 10,),
+          const SizedBox(height: 10),
           ImageHelper.CustomImage(img: 'shopping-cart (1) 1.png'),
-          const SizedBox(height: 10,),
-          Text('Reordering will be easy', style: TextStyle(
-            fontFamily: 'Poppins-Bold',
-            fontSize: 16
-            ),
+          const SizedBox(height: 10),
+          Text(
+            'Reordering will be easy',
+            style: TextStyle(fontFamily: 'Poppins-Bold', fontSize: 16),
           ),
-          Text('Items you order will show up here so you can buy\n them again easily.', style: TextStyle(
-              fontFamily: 'Poppins-Medium',
-              fontSize: 12
-            ),
+          Text(
+            'Items you order will show up here so you can buy\n them again easily.',
+            style: TextStyle(fontFamily: 'Poppins-Medium', fontSize: 12),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 20),
           Row(
             children: [
-              const SizedBox(width: 15,),
-              Text('Bestsellers', style: TextStyle(
-                  fontFamily: 'Poppins-SemiBold',
-                  fontSize: 16
-                ),
+              const SizedBox(width: 10),
+              Text(
+                'Bestsellers',
+                style: TextStyle(fontFamily: 'Poppins-SemiBold', fontSize: 16),
               ),
             ],
           ),
@@ -117,8 +120,8 @@ class CartScreen extends StatelessWidget {
           Row(
             children: [
               ProductWidget(
-                  title: 'Amul Taaza Toned\nFresh Milk',
-                  imagePath: 'assets/images/image 45.png',
+                title: 'Amul Taaza Toned\nFresh Milk',
+                imagePath: 'assets/images/image 45.png',
                 price: '₹ 27',
               ),
               ProductWidget(
@@ -132,8 +135,7 @@ class CartScreen extends StatelessWidget {
                 price: '₹ 37',
               ),
             ],
-          )
-
+          ),
         ],
       ),
     );

@@ -7,7 +7,15 @@ import 'package:blinkit_ui/widgets/search/search_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
+
+  var grocerykitchen = [
+    {"img": "assets/images/legume.png", "text": "Vegetables & \nFruits"},
+    {"img": "assets/images/image 46 (1).png", "text": "Atta, Dal & \nRice"},
+    {"img": "assets/images/image 46 (2).png", "text": "Oil, Ghee & \nMasala"},
+    {"img": "assets/images/image 46 (3).png", "text": "Dairy, Bread & \nMilk"},
+    {"img": "assets/images/image 46 (4).png", "text": "Biscuits & \nBakery"},
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +26,7 @@ class HomeScreen extends StatelessWidget {
           Stack(
             children: [
               Container(
-                height: 180,
+                height: 160,
                 width: double.infinity,
                 color: AppColors.appBarHomeColor,
                 child: Column(
@@ -78,10 +86,14 @@ class HomeScreen extends StatelessWidget {
               ),
               Positioned(
                 right: 10,
-                bottom: 120,
+                bottom: 80,
                 child: CircleAvatar(
                   backgroundColor: Colors.black,
-                  child: Icon(Icons.person_sharp, color: Colors.white, size: 20),
+                  child: Icon(
+                    Icons.person_sharp,
+                    color: Colors.white,
+                    size: 20,
+                  ),
                 ),
               ),
             ],
@@ -100,13 +112,14 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: 5),
                   Row(
                     children: [
-
                       ImageHelper.CustomImage(img: 'image 60.png'),
                       ImageHelper.CustomImage(img: 'image 55.png'),
-                      Text('Mega Diwali Sale', style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 20
+                      Text(
+                        'Mega Diwali Sale',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 20,
                         ),
                       ),
                       ImageHelper.CustomImage(img: 'image 60.png'),
@@ -119,26 +132,26 @@ class HomeScreen extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       children: [
                         DiwaliCategoryCard(
-                            title: 'Lights, Diyas & Candles',
-                            imagePath: 'assets/images/image 50.png'
+                          title: 'Lights, Diyas & Candles',
+                          imagePath: 'assets/images/image 50.png',
                         ),
                         DiwaliCategoryCard(
-                            title: 'Diwali Gifts',
-                            imagePath: 'assets/images/image 51.png'
+                          title: 'Diwali Gifts',
+                          imagePath: 'assets/images/image 51.png',
                         ),
                         DiwaliCategoryCard(
-                            title: 'Appliances & Gadgets',
-                            imagePath: 'assets/images/image 52.png'
+                          title: 'Appliances & Gadgets',
+                          imagePath: 'assets/images/image 52.png',
                         ),
                         DiwaliCategoryCard(
-                            title: 'Home & Living',
-                            imagePath: 'assets/images/image 53.png'
+                          title: 'Home & Living',
+                          imagePath: 'assets/images/image 53.png',
                         ),
                       ],
                     ),
-                  )
+                  ),
                 ],
-              )
+              ),
             ],
           ),
           const SizedBox(height: 10),
@@ -169,14 +182,17 @@ class HomeScreen extends StatelessWidget {
           Row(
             children: [
               const SizedBox(width: 10),
-              Text('Grocery & Kitchen', style: TextStyle(
-                fontFamily: 'Poppins-Bold',
-                fontSize: 14
-                ),
+              Text(
+                'Grocery & Kitchen',
+                style: TextStyle(fontFamily: 'Poppins-Bold', fontSize: 14),
               ),
             ],
           ),
-          CategoryWidget()
+          CategoryWidget(
+              img: grocerykitchen.toString(),
+              title: grocerykitchen.toString(),
+              article: grocerykitchen
+          )
         ],
       ),
     );

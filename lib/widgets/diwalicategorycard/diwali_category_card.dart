@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
 class DiwaliCategoryCard extends StatelessWidget {
-  
   final String title;
   final String imagePath;
-  
+
   const DiwaliCategoryCard({
-    super.key, 
+    super.key,
     required this.title,
-    required this.imagePath
+    required this.imagePath,
   });
 
   @override
@@ -18,7 +17,7 @@ class DiwaliCategoryCard extends StatelessWidget {
       margin: const EdgeInsets.only(left: 5),
       decoration: BoxDecoration(
         color: Color(0xFFEAD3D3),
-        borderRadius: BorderRadius.circular(12)
+        borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -26,15 +25,10 @@ class DiwaliCategoryCard extends StatelessWidget {
           const SizedBox(height: 8),
           Text(
             title,
-            style: TextStyle(
-              fontSize: 10,
-              fontFamily: 'Poppins-SemiBold'
-            ),
+            style: TextStyle(fontSize: 10, fontFamily: 'Poppins-SemiBold'),
             textAlign: TextAlign.center,
           ),
-          Expanded(
-              child: Image.asset(imagePath, fit: BoxFit.contain,)
-          ),
+          Expanded(child: Image.asset(imagePath, fit: BoxFit.contain)),
         ],
       ),
     );

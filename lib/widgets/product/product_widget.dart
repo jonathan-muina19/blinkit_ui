@@ -39,7 +39,10 @@ class ProductWidget extends StatelessWidget {
                 bottom: 0,
                 right: 8,
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 5,
+                  ),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(4),
@@ -80,14 +83,14 @@ class ProductWidget extends StatelessWidget {
           /// Minute
           Row(
             children: [
-             Image.asset('assets/images/timer 4.png'),
+              Image.asset('assets/images/timer 4.png'),
               const SizedBox(width: 4),
               Text(
                 time,
                 style: const TextStyle(
                   color: Colors.grey,
                   fontSize: 10,
-                  fontFamily: 'Poppins-Regular'
+                  fontFamily: 'Poppins-Regular',
                 ),
               ),
             ],
@@ -98,10 +101,7 @@ class ProductWidget extends StatelessWidget {
           /// Prix
           Text(
             price,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 14,
-            ),
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
           ),
         ],
       ),
