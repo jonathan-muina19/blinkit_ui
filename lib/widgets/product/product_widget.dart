@@ -41,14 +41,15 @@ class ProductWidget extends StatelessWidget {
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   decoration: BoxDecoration(
-                    color: Colors.green,
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(4),
+                    border: Border.all(color: Colors.green),
                   ),
                   child: const Text(
                     'ADD',
                     style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
+                      color: Colors.green,
+                      fontSize: 6,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

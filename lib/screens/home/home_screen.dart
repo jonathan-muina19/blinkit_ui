@@ -1,5 +1,6 @@
 import 'package:blinkit_ui/constantes/app_colors.dart';
 import 'package:blinkit_ui/constantes/images.dart';
+import 'package:blinkit_ui/widgets/catrgorieswidget/category_widget.dart';
 import 'package:blinkit_ui/widgets/diwalicategorycard/diwali_category_card.dart';
 import 'package:blinkit_ui/widgets/product/product_widget.dart';
 import 'package:blinkit_ui/widgets/search/search_bar.dart';
@@ -61,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          ' Sujal Dave, Ratanada, Jodhpur (Raj)',
+                          'Jordan Muina, Kinshasa, RDC(Kin)',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 12,
@@ -133,7 +134,6 @@ class HomeScreen extends StatelessWidget {
                             title: 'Home & Living',
                             imagePath: 'assets/images/image 53.png'
                         ),
-
                       ],
                     ),
                   )
@@ -143,7 +143,7 @@ class HomeScreen extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           SizedBox(
-            height: 200,
+            height: 190,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
@@ -161,11 +161,22 @@ class HomeScreen extends StatelessWidget {
                 ),
                 ProductWidget(
                   title: 'Bikaji Bhujia',
-                  imagePath: 'assets/images/image 63.png',
+                  imagePath: 'assets/images/image 53.png',
                 ),
               ],
             ),
-          )
+          ),
+          Row(
+            children: [
+              const SizedBox(width: 10),
+              Text('Grocery & Kitchen', style: TextStyle(
+                fontFamily: 'Poppins-Bold',
+                fontSize: 14
+                ),
+              ),
+            ],
+          ),
+          CategoryWidget()
         ],
       ),
     );

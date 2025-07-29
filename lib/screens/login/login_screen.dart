@@ -41,7 +41,7 @@ class LoginScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       Text(
-                        'Sujal',
+                        'Jonathan',
                         style: TextStyle(
                           fontSize: 15,
                           fontFamily: 'Poppins-Regular',
