@@ -3,21 +3,20 @@ import 'package:flutter/material.dart';
 class CategoryWidget extends StatelessWidget {
 
   final String img;
-  final String title;
   final List<Map<String, dynamic>> article;
 
-  CategoryWidget({super.key,
+  const CategoryWidget({super.key,
     required this.img,
-    required this.title,
     required this.article
   });
 
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.only(left: 10),
+    return Padding(
+      padding: const EdgeInsets.only(left: 10),
+      child: SizedBox(
+        height: 105,
         child: ListView.builder(
           itemBuilder: (context, index) {
             return Column(
@@ -36,7 +35,7 @@ class CategoryWidget extends StatelessWidget {
                 ),
                 Expanded(
                   child: Text(
-                    article[index]['text'].toString(),
+                    (article[index]['text'] ?? '').toString() ,
                     style: TextStyle(
                       fontSize: 9,
                       fontFamily: 'Poppins-Regular',
